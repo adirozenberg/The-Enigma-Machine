@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" stylesheets="@bruteForceStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tryJavaFX.bruteForce.BruteForceController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="596.0" prefWidth="898.0" styleClass="root" stylesheets="@bruteForceStyleSheet.css">
+         <children>
+            <ListView fx:id="agentsCandidateListView" layoutX="10.0" layoutY="415.0" prefHeight="131.0" prefWidth="391.0" />
+            <TextArea fx:id="currentMachineConfigurationTextArea" editable="false" layoutX="158.0" layoutY="33.0" prefHeight="55.0" prefWidth="550.0" />
+            <TextArea fx:id="encryptTextArea" layoutX="14.0" layoutY="129.0" prefHeight="53.0" prefWidth="397.0" />
+            <Button fx:id="processButton" layoutX="423.0" layoutY="174.0" mnemonicParsing="false" onAction="#clickProcessButtonAction" text="Process">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="dictionarySuggestionsButton" layoutX="422.0" layoutY="131.0" mnemonicParsing="false" onAction="#clickDictionarySuggestionsAction" prefHeight="32.0" prefWidth="183.0" text="Dictionary Suggestions">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" layoutX="423.0" layoutY="215.0" mnemonicParsing="false" onAction="#clickResetButtonAction" text="Reset">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Slider fx:id="agentsSlider" blockIncrement="1.0" layoutX="11.0" layoutY="313.0" pickOnBounds="false" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <ComboBox fx:id="difficultyLevelComboBox" layoutX="185.0" layoutY="320.0" prefWidth="150.0" />
+            <TextField fx:id="missionExtentTextField" layoutX="369.0" layoutY="320.0" prefHeight="37.0" prefWidth="192.0" />
+            <Button fx:id="startButton" layoutX="578.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickStartButtonAction" text="Start">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="pauseButton" disable="true" layoutX="641.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickPauseButtonAction" text="Pause">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="stopButton" disable="true" layoutX="800.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickStopButtonAction" text="Stop">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="resumeButton" disable="true" layoutX="713.0" layoutY="320.0" mnemonicParsing="false" onAction="#clickResumeButtonAction" text="Resume">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ProgressBar fx:id="candidatesProgressBar" layoutX="575.0" layoutY="526.0" prefWidth="300.0" progress="0.0" />
+            <TextArea fx:id="decryptTextArea" layoutX="13.0" layoutY="189.0" prefHeight="57.0" prefWidth="398.0" />
+            <Text layoutX="253.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Current machine configuration">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="13.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Enter your string here">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="133.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Brute Force Details">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="41.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Agents">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="182.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Difficulty Level">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="385.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Mission Extent">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="125.0" layoutY="409.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label" text="Candidates">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.2815533980582524">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fad32800" offset="0.007246376811594203" />
+                        <Stop color="#ff000000" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.37378640776699035">
+                     <stops>
+                        <Stop color="#fcd526" />
+                        <Stop color="#fcd526" offset="0.007246376811594203" />
+                        <Stop color="RED" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <ImageView fx:id="imageView1" fitHeight="150.0" fitWidth="200.0" layoutX="641.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../spongebob/bob1.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageView2" fitHeight="150.0" fitWidth="200.0" layoutX="414.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../spongebob/bob3.gif" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageView3" fitHeight="150.0" fitWidth="200.0" layoutX="644.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../spongebob/bob5.gif" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="finalTimeTextArea" layoutX="413.0" layoutY="526.0" prefHeight="32.0" prefWidth="142.0" promptText="Final time..." />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

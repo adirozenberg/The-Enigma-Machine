@@ -1,0 +1,7 @@
+.root {
+    -fx-background-image: url("/tryJavaFX/header/black1.jfif");
+    /*-fx-background-color: #5B5A5A;*/
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+
+}

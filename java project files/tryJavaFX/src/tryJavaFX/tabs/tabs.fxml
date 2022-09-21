@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="root" stylesheets="@tabsStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tryJavaFX.tabs.TabsController">
+   <children>
+      <TabPane layoutX="-4.0" prefHeight="600.0" prefWidth="904.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0.0, 0, 1); -fx-background-image: url(&quot;/tryJavaFX/header/black1.jfif&quot;);" styleClass="root" stylesheets="@tabsStyleSheet.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="machineTab" disable="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0.0, 0, 1);;" text="Machine">
+               <content>
+                  <fx:include fx:id="machineComponent" source="../machine/Machine.fxml" />
+               </content>
+          </Tab>
+          <Tab fx:id="encryptDecryptTab" disable="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0.0, 0, 1);;" text="Encrypt \ Decrypt">
+               <content>
+                  <fx:include fx:id="encryptDecryptComponent" source="../encryptDecrypt/Encrypt-Decrypt.fxml" />
+               </content>
+          </Tab>
+            <Tab fx:id="bruteForceTab" disable="true" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,1), 5, 0.0, 0, 1);;" text="Brute Force">
+               <content>
+                  <fx:include fx:id="bruteForceComponent" source="../bruteForce/Brute-Force.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

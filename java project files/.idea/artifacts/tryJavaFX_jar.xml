@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact name="tryJavaFX:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tryJavaFX_jar</output-path>
+    <root id="root">
+      <element id="archive" name="tryJavaFX.jar">
+        <element id="module-output" name="tryJavaFX" />
+        <element id="module-output" name="engine" />
+        <element id="module-output" name="enigmaMachine" />
+        <element id="module-output" name="bruteForce" />
+      </element>
+    </root>
+  </artifact>
+</component>
